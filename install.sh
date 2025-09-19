@@ -12,7 +12,8 @@ DOWNLOAD_DIR="/tmp/grid-unpacker-install"
 
 echo "🚀 Installing Grid Unpacker..."
 
-# Create download directory
+# Create download directory (clean it first if it exists)
+rm -rf "$DOWNLOAD_DIR"
 mkdir -p "$DOWNLOAD_DIR"
 cd "$DOWNLOAD_DIR"
 
@@ -34,7 +35,7 @@ curl -L -o "$APP_NAME.zip" "$DOWNLOAD_URL"
 
 # Extract the app
 echo "📂 Extracting..."
-unzip -q "$APP_NAME.zip"
+unzip -o -q "$APP_NAME.zip"
 
 # Move to Applications folder
 echo "📱 Installing to Applications folder..."
