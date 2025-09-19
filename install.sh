@@ -12,8 +12,11 @@ DOWNLOAD_DIR="/tmp/grid-unpacker-install"
 
 echo "🚀 Installing Grid Unpacker..."
 
-# Create download directory (clean it first if it exists)
+# Clean up any existing installation attempts
 rm -rf "$DOWNLOAD_DIR"
+rm -rf "/tmp/Grid Unpacker.app" 2>/dev/null || true
+
+# Create download directory
 mkdir -p "$DOWNLOAD_DIR"
 cd "$DOWNLOAD_DIR"
 
